@@ -19,8 +19,8 @@ public class GoogleScrapper {
                     .timeout(100000)
                     .get();
 
-            Elements searchResults = doc.select("h3"); // Selects titles
-            Elements links = doc.select("a[href]"); // Selects links
+            Elements searchResults = doc.select("h3"); 
+            Elements links = doc.select("a[href]"); 
 
             for (int i = 0; i < Math.min(searchResults.size(), 10); i++) {
                 String title = searchResults.get(i).text();
